@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Noto Serif", ui-serif, Georgia, serif;
+
+  --color-obsidian: #0F1012;
+  --color-obsidian-light: #1A1C1E;
+  --color-obsidian-deep: #0a0b0c;
+  --color-stark-white: #F3F4F6;
+  
+  --color-surface: #0F1012;
+  --color-surface-dim: #0a0b0c;
+  --color-surface-bright: #1A1C1E;
+  --color-surface-container-lowest: #050506;
+  --color-surface-container-low: #0f1012;
+  --color-surface-container: #16171a;
+  --color-surface-container-high: #1c1e21;
+  --color-surface-container-highest: #242629;
+  
+  --color-on-surface: #F3F4F6;
+  --color-on-surface-variant: #A8A9AD;
+  --color-outline: rgba(255, 255, 255, 0.1);
+  --color-outline-variant: rgba(255, 255, 255, 0.05);
+}
+
+@layer base {
+  body {
+    @apply bg-obsidian text-stark-white font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-light tracking-tight;
+  }
+  
+  /* Selection styling */
+  ::selection {
+    @apply bg-white text-obsidian;
+  }
+}
+
+@layer components {
+  .container-wide {
+    @apply max-w-[1440px] mx-auto px-6 md:px-20;
+  }
+
+  .label-caps {
+    @apply text-[10px] font-bold uppercase tracking-[0.4em] font-sans leading-tight;
+  }
+
+  .border-obsidian {
+    @apply border-white/10;
+  }
+
+  .divide-obsidian {
+    @apply divide-white/10;
+  }
+}
+
